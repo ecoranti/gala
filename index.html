@@ -39,24 +39,30 @@
         /* Estilos para el texto superpuesto */
         .superimposed-text {
             position: absolute;
-            top: 50%; /* Ajusta la posición superior para estar sobre la imagen */
-            left: 50%; /* Ajusta la posición izquierda para centrar el texto */
-            width: 90%; /* Ajusta el ancho para que el texto no desborde */
-            transform: translate(-50%, -50%); /* Centra el texto */
+            top: 1124.7px; /* Ajusta la posición Y según la especificación */
+            left: 50%; /* Ajusta la posición X según la especificación */
+            transform: translateX(-50%); /* Centra horizontalmente */
+            width: 888.9px; /* Ajusta el ancho según la especificación */
+            height: 371.7px; /* Ajusta el alto según la especificación */
             background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente para mejorar la legibilidad */
             padding: 10px;
             border-radius: 10px;
-            text-align: left;
+            text-align: center; /* Centra el texto horizontalmente */
+            display: flex;
+            justify-content: center; /* Centra el texto verticalmente */
+            align-items: center; /* Centra el texto verticalmente */
         }
 
         .superimposed-text p {
             margin: 10px 0;
             font-size: 1.2em; /* Tamaño de fuente ajustable */
+            /* Nuevo tamaño */
+            font-size: 24px;
         }
 
         /* Estilos para los botones */
         .btn-container {
-            margin-top: 20px; /* Añade menos espacio superior para mover los botones hacia arriba */
+            margin-top: 40px; /* Añade un poco más de espacio superior */
         }
 
         .btn {
