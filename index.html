@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GALA</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         /* Estilos para hacer la página con una imagen de fondo */
         body {
@@ -15,29 +16,67 @@
             padding: 0;
             color: #ffffff;
             font-family: Arial, sans-serif;
+            text-align: center;
         }
 
         /* Estilos para el contenido */
         .container {
-            padding-top: 20px;
+            padding: 20px;
             text-align: center;
         }
 
         /* Estilos para la imagen superior */
         .imagen-superior {
-            max-width: 100%; /* Ajusta al ancho del contenedor */
+            width: 100%; /* Ajusta al ancho del contenedor */
             height: auto; /* Mantiene la relación de aspecto */
             display: block;
             margin: 0 auto 20px; /* Centra horizontalmente y agrega espacio abajo */
+        }
+
+        /* Estilos para el encabezado y el párrafo */
+        h1 {
+            font-size: 2em; /* Tamaño de fuente ajustable */
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 1.2em; /* Tamaño de fuente ajustable */
+            margin-bottom: 20px;
+        }
+
+        /* Estilos para los botones */
+        .btn {
+            display: inline-block;
+            margin: 10px;
+            padding: 10px 20px;
+            font-size: 1.2em;
+            color: #ffffff;
+            background-color: #f76c6c;
+            border: none;
+            border-radius: 50px;
+            text-decoration: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #f53b3b;
+        }
+
+        .btn i {
+            margin-right: 10px;
         }
     </style>
 </head>
 <body>
     <div class="container">
         <!-- Contenido de la página aquí -->
-        <img class="imagen-superior" src="galita.png" alt="galita">
+        <img class="imagen-superior" src="galita.png" alt="Imagen de Galita">
         <h1>Bienvenido a GALA</h1>
-        <p>¡Esta es mi pagina en construcción!</p>
+        <p>¡Esta es mi página en construcción!</p>
+        <a href="tel:+5493584023966" class="btn"><i class="fas fa-paw"></i>Llamar</a>
+        <a href="https://wa.me/5493584023966" class="btn"><i class="fas fa-paw"></i>WhatsApp</a>
     </div>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </body>
 </html>
