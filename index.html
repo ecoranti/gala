@@ -10,13 +10,15 @@
         body {
             background-image: url('fondocel.png');
             background-size: cover;
+            background-attachment: fixed;
             background-repeat: no-repeat;
-            background-position: center center; /* Centra la imagen de fondo */
+            background-position: center center;
             margin: 0;
             padding: 0;
             color: #ffffff;
             font-family: Arial, sans-serif;
             text-align: center;
+            min-height: 100vh; /* Asegura que el fondo cubra toda la pantalla */
         }
 
         /* Estilos para el contenido */
@@ -27,7 +29,7 @@
 
         /* Estilos para la imagen superior */
         .imagen-superior {
-            width: 100%; /* Ajusta al ancho del contenedor */
+            max-width: 90%; /* Ajusta al ancho del contenedor, dejando un poco de margen */
             height: auto; /* Mantiene la relación de aspecto */
             display: block;
             margin: 0 auto 20px; /* Centra horizontalmente y agrega espacio abajo */
@@ -45,6 +47,10 @@
         }
 
         /* Estilos para los botones */
+        .btn-container {
+            margin-top: 40px; /* Añade espacio superior para mover los botones hacia abajo */
+        }
+
         .btn {
             display: inline-block;
             margin: 10px;
@@ -66,6 +72,41 @@
         .btn i {
             margin-right: 10px;
         }
+
+        /* Estilos para el menú desplegable */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f76c6c;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: white;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            border-radius: 50px;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #f53b3b;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown:hover .btn {
+            background-color: #f53b3b;
+        }
     </style>
 </head>
 <body>
@@ -74,8 +115,16 @@
         <img class="imagen-superior" src="galita.png" alt="Imagen de Galita">
         <h1>Bienvenido a GALA</h1>
         <p>¡Esta es mi página en construcción!</p>
-        <a href="tel:+5493584023966" class="btn"><i class="fas fa-paw"></i>Llamar</a>
-        <a href="https://wa.me/5493584023966" class="btn"><i class="fas fa-paw"></i>WhatsApp</a>
+        <div class="btn-container">
+            <div class="dropdown">
+                <button class="btn"><i class="fas fa-paw"></i>Llamar a casa</button>
+                <div class="dropdown-content">
+                    <a href="tel:+5493584023966">Llamar al +5493584023966</a>
+                    <a href="tel:+5493584301020">Llamar al +5493584301020</a>
+                </div>
+            </div>
+            <a href="https://wa.me/5493584023966" class="btn"><i class="fas fa-paw"></i>WhatsApp</a>
+        </div>
     </div>
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </body>
