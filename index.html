@@ -21,48 +21,39 @@
             min-height: 100vh; /* Asegura que el fondo cubra toda la pantalla */
         }
 
-        /* Estilos para el contenido */
-        .container {
-            position: relative; /* Para permitir posicionar el texto encima de la imagen */
-            padding: 20px;
-            text-align: center;
+        /* Estilos para el contenedor de la imagen superior */
+        .image-container {
+            position: relative;
+            max-width: 90%; /* Ajusta al ancho del contenedor */
+            margin: 0 auto; /* Centra horizontalmente */
         }
 
         /* Estilos para la imagen superior */
         .imagen-superior {
-            max-width: 90%; /* Ajusta al ancho del contenedor, dejando un poco de margen */
+            width: 100%; /* Ajusta al ancho del contenedor */
             height: auto; /* Mantiene la relación de aspecto */
             display: block;
-            margin: 0 auto; /* Centra horizontalmente */
         }
 
         /* Estilos para el texto superpuesto */
         .superimposed-text {
             position: absolute;
-            top: 1124.7px; /* Ajusta la posición Y según la especificación */
-            left: 50%; /* Ajusta la posición X según la especificación */
-            transform: translateX(-50%); /* Centra horizontalmente */
-            width: 888.9px; /* Ajusta el ancho según la especificación */
-            height: 371.7px; /* Ajusta el alto según la especificación */
-            background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente para mejorar la legibilidad */
+            bottom: 0; /* Alinea el texto en la parte inferior */
+            left: 0;
+            width: 100%; /* Ajusta al ancho del contenedor */
+            background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
             padding: 10px;
-            border-radius: 10px;
-            text-align: center; /* Centra el texto horizontalmente */
-            display: flex;
-            justify-content: center; /* Centra el texto verticalmente */
-            align-items: center; /* Centra el texto verticalmente */
+            text-align: center;
         }
 
         .superimposed-text p {
             margin: 10px 0;
             font-size: 1.2em; /* Tamaño de fuente ajustable */
-            /* Nuevo tamaño */
-            font-size: 24px;
         }
 
         /* Estilos para los botones */
         .btn-container {
-            margin-top: 40px; /* Añade un poco más de espacio superior */
+            margin-top: 20px; /* Añade espacio superior para los botones */
         }
 
         .btn {
@@ -126,10 +117,11 @@
 <body>
     <div class="container">
         <!-- Contenido de la página aquí -->
-        <img class="imagen-superior" src="galita.png" alt="Imagen de Galita">
-        <div class="superimposed-text">
-            <p>Vivo en el edificio Kahlo (Deheza 33- Dto 04). Si me encontraste en la calle, no te preocupes. Hay dos horarios en los que me gusta salir a pasear, y mis dueños me lo permiten (mañana temprano y tardecita). Ya estoy acostumbrada y yo se los pido.<br/>Si me ves muy lejos de mi casa, llamá.</p>
-
+        <div class="image-container">
+            <img class="imagen-superior" src="galita.png" alt="Imagen de Galita">
+            <div class="superimposed-text">
+                <p>Vivo en el edificio Kahlo (Deheza 33- Dto 04). Si me encontraste en la calle, no te preocupes. Hay dos horarios en los que me gusta salir a pasear, y mis dueños me lo permiten (mañana temprano y tardecita). Ya estoy acostumbrada y yo se los pido.<br/>Si me ves muy lejos de mi casa, llamá.</p>
+            </div>
         </div>
         <div class="btn-container">
             <div class="dropdown">
@@ -139,9 +131,7 @@
                     <a href="tel:+5493584301020">Llamar a Pabla</a>
                 </div>
             </div>
-            <a href="https://wa.me/5493584301020" class="btn"><i class="fas fa-paw"></i>WhatsApp</a>
+            <a href="https://wa.me/5493584023966" class="btn"><i class="fas fa-paw"></i>WhatsApp</a>
         </div>
     </div>
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-</body>
-</html>
+    <script src="https://kit.font
