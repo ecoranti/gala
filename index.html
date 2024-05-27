@@ -34,14 +34,14 @@
             box-sizing: border-box; /* Asegura que el padding se incluya en el tamaño total del contenedor */
             position: fixed; /* Fija el contenedor en la parte inferior */
             bottom: 0; /* Posiciona el contenedor en la parte inferior */
-            background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente para mejorar visibilidad en móviles */
+            background-color: transparent; /* Fondo transparente */
         }
 
         /* Estilos para los botones */
         .btn {
             margin: 10px;
-            padding: 10px 20px;
-            font-size: 1.2em;
+            padding: 8px 15px; /* Tamaño ajustado de los botones */
+            font-size: 1em; /* Tamaño de fuente más pequeño */
             color: #ffffff;
             background-color: #f76c6c;
             border: none;
@@ -49,7 +49,6 @@
             text-decoration: none;
             cursor: pointer;
             transition: background-color 0.3s ease;
-            flex: 1; /* Asegura que los botones ocupen el mismo espacio */
             display: flex;
             justify-content: center;
             align-items: center;
@@ -60,7 +59,7 @@
         }
 
         .btn i {
-            margin-right: 10px;
+            margin-right: 5px; /* Ajuste del margen del icono */
         }
 
         /* Estilos para el menú desplegable */
@@ -78,7 +77,7 @@
             left: 50%;
             transform: translateX(-50%);
             background-color: #f76c6c;
-            min-width: 160px;
+            min-width: 120px; /* Ancho reducido */
             box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
             z-index: 1;
             border-radius: 50px;
@@ -86,7 +85,7 @@
 
         .dropdown-content a {
             color: white;
-            padding: 12px 16px;
+            padding: 8px 10px; /* Tamaño ajustado del menú desplegable */
             text-decoration: none;
             display: block;
             border-radius: 50px; /* Mantiene la forma redondeada */
@@ -104,7 +103,7 @@
         /* Asegura que los botones se mantengan visibles en la parte inferior en dispositivos móviles */
         @media (max-width: 600px) {
             .container {
-                flex-direction: column;
+                flex-direction: row;
                 align-items: center;
                 justify-content: center;
             }
@@ -115,8 +114,10 @@
             }
 
             .btn {
-                width: 80%; /* Ajusta el ancho de los botones para dispositivos móviles */
-                margin: 5px 0;
+                width: auto; /* Ajusta el ancho de los botones para dispositivos móviles */
+                margin: 5px;
+                padding: 5px 10px; /* Tamaño reducido para dispositivos móviles */
+                font-size: 0.9em; /* Fuente más pequeña para dispositivos móviles */
             }
         }
     </style>
