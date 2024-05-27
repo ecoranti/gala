@@ -19,20 +19,20 @@
             font-family: Arial, sans-serif;
             text-align: center;
             min-height: 100vh; /* Asegura que el fondo cubra toda la pantalla */
+            position: relative;
         }
 
         /* Estilos para el contenido */
         .container {
-            position: relative;
-            padding: 20px;
-            text-align: center;
+            position: absolute;
+            bottom: 20px; /* Ajusta según sea necesario para dar margen inferior */
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            padding: 0 20px;
         }
 
         /* Estilos para los botones */
-        .btn-container {
-            margin-top: 20px;
-        }
-
         .btn {
             display: inline-block;
             margin: 10px;
@@ -93,17 +93,37 @@
 </head>
 <body>
     <div class="container">
-        <div class="btn-container">
-            <div class="dropdown">
-                <button class="btn"><i class="fas fa-paw"></i>Llamar a casa</button>
-                <div class="dropdown-content">
-                    <a href="tel:+5493584023966">Llamar a Elias</a>
-                    <a href="tel:+5493584301020">Llamar a Pabla</a>
-                </div>
+        <div class="dropdown">
+            <button class="btn" onclick="toggleDropdown()"><i class="fas fa-paw"></i>Llamar a casa</button>
+            <div class="dropdown-content" id="dropdown-content">
+                <a href="tel:+5493584023966">Llamar a Elias</a>
+                <a href="tel:+5493584301020">Llamar a Pabla</a>
             </div>
-            <a href="https://wa.me/5493584301020" class="btn"><i class="fas fa-paw"></i>WhatsApp</a>
         </div>
+        <a href="https://wa.me/5493584301020" class="btn"><i class="fas fa-paw"></i>WhatsApp</a>
     </div>
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script>
+        function toggleDropdown() {
+            document.getElementById("dropdown-content").classList.toggle("show");
+        }
+
+        window.onclick = function(event) {
+            if (!event.target.matches('.btn')) {
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                for (var i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .show {
+            display: block;
+        }
+    </style>
 </body>
 </html>
