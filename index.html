@@ -9,7 +9,7 @@
     <style>
         /* Estilos para hacer la página con una imagen de fondo */
         body {
-            background-image: url('Galanew.png');
+            background-image: url('Gala.png');
             background-size: cover;
             background-attachment: fixed;
             background-repeat: no-repeat;
@@ -21,16 +21,17 @@
             text-align: center;
             min-height: 100vh; /* Asegura que el fondo cubra toda la pantalla */
             position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end; /* Alinea los elementos hijos al final del contenedor */
         }
 
         /* Estilos para el contenido */
         .container {
-            position: absolute;
-            bottom: 20px; /* Ajusta según sea necesario para dar margen inferior */
             width: 100%;
             display: flex;
             justify-content: space-between;
-            padding: 0 20px;
+            padding: 20px;
         }
 
         /* Estilos para los botones */
