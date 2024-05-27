@@ -64,6 +64,9 @@
         .dropdown-content {
             display: none;
             position: absolute;
+            bottom: 100%; /* Despliega hacia arriba */
+            left: 50%;
+            transform: translateX(-50%);
             background-color: #f76c6c;
             min-width: 160px;
             box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
@@ -82,12 +85,8 @@
             background-color: #f53b3b;
         }
 
-        .dropdown:hover .dropdown-content {
+        .show {
             display: block;
-        }
-
-        .dropdown:hover .btn {
-            background-color: #f53b3b;
         }
     </style>
 </head>
@@ -105,7 +104,8 @@
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
     <script>
         function toggleDropdown() {
-            document.getElementById("dropdown-content").classList.toggle("show");
+            var dropdownContent = document.getElementById("dropdown-content");
+            dropdownContent.classList.toggle("show");
         }
 
         window.onclick = function(event) {
@@ -120,10 +120,5 @@
             }
         }
     </script>
-    <style>
-        .show {
-            display: block;
-        }
-    </style>
 </body>
 </html>
