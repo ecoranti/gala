@@ -8,7 +8,7 @@
     <style>
         /* Estilos para hacer la página con una imagen de fondo */
         body {
-            background-image: url('fondocel.png');
+            background-image: url('Gala.png');
             background-size: cover;
             background-attachment: fixed;
             background-repeat: no-repeat;
@@ -23,40 +23,14 @@
 
         /* Estilos para el contenido */
         .container {
-            position: relative; /* Para permitir posicionar el texto encima de la imagen */
+            position: relative;
             padding: 20px;
             text-align: center;
         }
 
-        /* Estilos para la imagen superior */
-        .imagen-superior {
-            width: 100vw; /* Ajusta al ancho completo de la pantalla */
-            height: auto; /* Mantiene la relación de aspecto */
-            display: block;
-            margin: 0 auto; /* Centra horizontalmente */
-        }
-
-        /* Estilos para el texto superpuesto */
-        .superimposed-text {
-            position: absolute;
-            bottom: 20px; /* Ajusta la posición para estar en la parte inferior de la imagen */
-            left: 50%; /* Centra horizontalmente */
-            transform: translateX(-50%);
-            width: 90%; /* Ajusta el ancho para que el texto no desborde */
-            background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente para mejorar la legibilidad */
-            padding: 10px;
-            border-radius: 10px;
-            text-align: center;
-        }
-
-        .superimposed-text p {
-            margin: 10px 0;
-            font-size: 1.2em; /* Tamaño de fuente ajustable */
-        }
-
         /* Estilos para los botones */
         .btn-container {
-            margin-top: 20px; /* Añade menos espacio superior para mover los botones hacia arriba */
+            margin-top: 20px;
         }
 
         .btn {
@@ -119,11 +93,6 @@
 </head>
 <body>
     <div class="container">
-        <!-- Contenido de la página aquí -->
-        <img class="imagen-superior" src="galita.png" alt="Imagen de Galita">
-        <div class="superimposed-text">
-            <p>Vivo en el edificio Kahlo (Deheza 33- Dto 04). Si me encontraste en la calle, no te preocupes. Hay dos horarios en los que me gusta salir a pasear, y mis dueños me lo permiten (mañana temprano y tardecita). Ya estoy acostumbrada y yo se los pido.<br/>Si me ves muy lejos de mi casa, llamá.</p>
-        </div>
         <div class="btn-container">
             <div class="dropdown">
                 <button class="btn"><i class="fas fa-paw"></i>Llamar a casa</button>
